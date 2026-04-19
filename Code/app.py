@@ -218,11 +218,6 @@ if st.session_state.page == "home":
     It’s easy to use. Using your phone's camera, you can recognize skin conditions of all shapes and sizes.
     </div>
 
-    <div class="store-container">
-    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg">
-    </div>
-
     </div>
     """, unsafe_allow_html=True)
 
