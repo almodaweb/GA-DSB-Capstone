@@ -113,10 +113,7 @@ def predict(image):
 # =========================
 # OPENAI
 # =========================
-client = OpenAI(
-    api_key=os.getenv("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"),
-    base_url="https://openrouter.ai/api/v1"
-)
+client = OpenAI(api_key=st.secrets["OPENROUTER_API_KEY"])
 
 def explain(condition):
     response = client.chat.completions.create(
