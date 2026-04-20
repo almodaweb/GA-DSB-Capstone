@@ -118,7 +118,7 @@ client = OpenAI(api_key=st.secrets["OPENROUTER_API_KEY"])
 def explain(condition):
     response = client.chat.completions.create(
         model="openai/gpt-4o-mini",
-        messages=[
+        messages=[§
             {"role": "system", "content": "You are a dermatology AI assistant."},
             {"role": "user", "content": f"Explain {condition} with causes and care."}
         ],
