@@ -80,11 +80,11 @@ section.main * {
 # =========================
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("../Model/SCIN_model_DenseNet.keras")
+    return tf.keras.models.load_model("Model/SCIN_model_DenseNet.keras")
 
 @st.cache_resource
 def load_labels():
-    with open("../Model/SCIN_labels_DenseNet.json", "r") as f:
+    with open("Model/SCIN_labels_DenseNet.json", "r") as f:
         labels = json.load(f)
     return {int(k): v for k, v in labels.items()}
 
@@ -113,7 +113,13 @@ def predict(image):
 # =========================
 # OPENAI
 # =========================
-client = OpenAI(api_key=st.secrets["OPENROUTER_API_KEY"])
+from openai import OpenAI
+import streamlit as st
+
+client = OpenAI(
+    api_key=st.secrets["OPENROUTER_API_KEY"],
+    base_url="https://openrouter.ai/api/v1"
+)
 
 def explain(condition):
     response = client.chat.completions.create(
