@@ -83,6 +83,8 @@ Future work will focus on improving model performance through advanced transfer 
 
 A short walkthrough of DermAI, including the problem, model, and live application demo can be found [here](https://youtu.be/UZiGqZhheig).
 
+The application can be accessed [here](https://ga-dsb-capstone.streamlit.app). 
+
 ## License & acknowledgments
 
 This project is for educational and research purposes only. Not intended for commercial use or clinical diagnosis.
